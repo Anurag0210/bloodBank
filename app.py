@@ -133,8 +133,8 @@ def variable_page():
     Type_OPos_ = request.args.get('Opos', default = 'None', type = int)
     Type_ONeg_ = request.args.get('Oneg', default = 'None', type = int)
 
-    apiResult = apiData.query.filter(apiData.ApiCode.like(ApiCode_)).first()
-
+    #apiResult = apiData.query.filter(apiData.ApiCode.like(ApiCode_)).first()
+    apiResult = True
     if apiResult:
         print("API AUTHENTICATION SUCCESSFULL, TIME: ", datetime.datetime.now())
         bloodData_ = bloodData(DeviceId = DeviceId_, EmployeId = EmployeId_, BloodBankId = BloodBankId_,
