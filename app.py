@@ -52,7 +52,7 @@ class trackData(db.Model):
     BloodDetail = db.Column(db.String(80), nullable = False)
 
     
-    def __init__(self, bloodBankId, BloodType, LocationData, BloodDetail, BloodDetail):
+    def __init__(self, bloodBankId, BloodType, LocationData, BloodDetail):
         self.bloodBankId = bloodBankId
         self.BloodType = BloodType
         self.LocationData= LocationData
