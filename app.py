@@ -118,7 +118,7 @@ def signInPage():
 def signup_page():
     return render_template('signUpPage.html')
 
-@app.route('/apiData')
+@app.route('/apiData', methods=['POST', 'GET'])
 def variable_page():
     ApiCode_ = request.args.get('API', default = 'None', type = str)
     DeviceId_ = request.args.get('Id', default = 'None', type = str)
