@@ -12,7 +12,7 @@ import datetime
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///bloodBank.sqlite3"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://wzmiosdswpvfvz:76c854e423c4395b6d65e6675acbd2cb599ca2082666aa73237ea72a26499ee5@ec2-35-175-68-90.compute-1.amazonaws.com:5432/d6859hvl1u8g0r"
 db = SQLAlchemy(app)
      
 class userData(db.Model):
