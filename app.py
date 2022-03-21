@@ -98,7 +98,7 @@ def __authLogin__(emailId_, password_):
    return False
 
 
-@app.route('/', methods = ['POST', 'GET'])
+@app.route('/', methods=['POST','GET'])
 def signInPage():
     if request.method == 'POST':
        emailId_ = request.form.get("email")
