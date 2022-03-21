@@ -143,7 +143,7 @@ def variable_page():
                                 Type_OPos = Type_OPos_, Type_ONeg = Type_ONeg_)
         db.session.add(bloodData_)
         db.session.commit()
-        return None
+        return "DATA SUCCESSFULL UPADTED"
 
 @app.route('/logout')
 def logout_page(): 
