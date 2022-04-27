@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script type=text/javascript src="{{url_for('static', filename='script.js') }}"></script>
+    <link href="{{url_for('static', filename='style.css') }}" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BloodBank</title>
+</head>
 
 <body>
+    <canvas id="c" width=1920 height=1080>
 
-    <p>LOGIN PAGE</p>
+    </canvas>
+    <div class="wrapper">
+        <br>
+        <h1 class="heading">Blood Management System 🩸</h1>
+        <br><br>
 
+        <div class="accordion" id="accordionExample"></div>
+    </div>
+
+    <script>
+        function u(t) {
+            for (k = i = 960; --i; x.fill(x.arc(k + i + S(m = i + t * k / 4) * (r = (S(t + m / k) * .5 + 1.4) * 1e5 / i), 540 + C(m) * r, s = 4e4 / i, 0, 7, (m = i - t * k | 0) % 59 || x.arc(k + i + S(m = m ** 5) * r / 3, 540 + C(m) * r / 2, s = r / 9, 0, 7))))x.beginPath(x.fillStyle = R(i / 4))
+        }
+
+        let time = 0;
+        let frame = 0;
+        let FPS = 60;
+        let x = document.getElementById("c").getContext('2d');
+        let S = Math.sin;
+        let C = Math.cos;
+        let T = Math.tan;
+        let R = (r, g, b, a = 1) => `rgba(${r | 0},${g | 0},${b | 0},${a})`;
+
+        let loop = (frameTime) => {
+            requestAnimationFrame(loop);
+
+            // update time
+            time = frame++ / FPS;
+            u(time);
+
+            {
+                // fill window
+                const aspect = c.width / c.height;
+                if (aspect > innerWidth / innerHeight) {
+                    c.style.height = '100%';
+                    c.style.width = '';
+                }
+                else {
+                    c.style.width = '100%';
+                    c.style.height = '';
+                }
+            }
+        }
+
+        loop();
+    </script>
 </body>
 
 </html>
